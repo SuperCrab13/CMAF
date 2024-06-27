@@ -1,2 +1,2 @@
 # CMAF
-All repository will be uploaded soonly
+Complete repository will be uploaded soon
