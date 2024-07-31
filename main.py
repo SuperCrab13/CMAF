@@ -160,7 +160,7 @@ parser.add_argument('--early_stopping',  action='store_true', default=False, hel
 
 ### CLAM-Specific Parameters
 parser.add_argument('--bag_weight',      type=float, default=0.7, help='clam: weight coefficient for bag-level loss (default: 0.7)')
-parser.add_argument('--testing', 	 	 action='store_true', default=False, help='debugging tool')
+
 
 args = parser.parse_args()
 device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -210,12 +210,7 @@ print('\nLoad Dataset')
 
 if 'survival' in args.task:
 	study = '_'.join(args.task.split('_')[:2])
-	# if study == 'tcga_kirc' or study == 'tcga_kirp':
-	# 	combined_study = 'tcga_kidney'
-	if study == 'tcga_luad' or study == 'tcga_lusc':
-		combined_study = 'tcga_lung'
-	else:
-		combined_study = study
+	combined_study = study
 	
 	study_dir = '%s_20x_features' % combined_study
 	print('csvpath','./%s/%s_all_clean.zip' % (args.dataset_path, study))
