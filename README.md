@@ -2,7 +2,7 @@
 CMAF is an multi-modal fusion method utilized to fuse pathology data and multi-omic data
 
 ## Data Preparing
-WSI data and omic data can be downloaded from the [NIH Genomic Data Commons Data Portal] (https://portal.gdc.cancer.gov/) and [UCSC Xena] (https://xenabrowser.net/).
+WSI data and omic data can be downloaded from the [NIH Genomic Data Commons Data Portal](https://portal.gdc.cancer.gov/) and [UCSC Xena](https://xenabrowser.net/).
 
 ## Running 
 Running the following command to train CMAF and perform survival predict
