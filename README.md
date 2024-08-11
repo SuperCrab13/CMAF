@@ -2,7 +2,7 @@
 CMAF is an multi-modal fusion method utilized to fuse pathology data and multi-omic data
 
 ## Data Preparing
-WSI data and omic data can be downloaded from the [NIH Genomic Data Commons Data Portal](https://portal.gdc.cancer.gov/) and [UCSC Xena](https://xenabrowser.net/). We used the publicaly available [CLAM WSI-analysis toolbox](https://github.com/mahmoodlab/CLAM) to process WSI data (.svs format). 256x256 patches are first extracted from tissue regions of each WSI, and a pretrained res-Net50 is utilized to encode image patches into 1024-dim feature vector. The extracted features are saved as torch tensors of size Nx1024, where N is the number of patches for each WSI. These feature matrices are saved in .pt files and saved as following structure.
+WSI data and omic data can be downloaded from the [NIH Genomic Data Commons Data Portal](https://portal.gdc.cancer.gov/) and [UCSC Xena](https://xenabrowser.net/). We used the publicaly available [CLAM WSI-analysis toolbox](https://github.com/mahmoodlab/CLAM) to process WSI data (.svs format). 256x256 patches are first extracted from tissue regions of each WSI, and a pretrained res-Net50 is utilized to encode image patches into 1024-dim feature vector. The extracted features are saved as torch tensors of size Nx1024, where N is the number of patches for each WSI. These feature matrices are saved in .pt files and saved as following structure. <br />
 
 ```bash
 DATA_DIRECTORY
@@ -22,6 +22,7 @@ DATA_DIRECTORY
             └──slide2.pt
             └──.......
 ```
+The processed multi-omics data can be accessed in the ./datasets_csv_mutsig folder. 
 
 ## Running 
 Running the following command to train CMAF and perform survival predict
